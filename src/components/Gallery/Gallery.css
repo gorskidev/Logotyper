@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 4rem;
+    max-width: 100% ;
+    margin: 0 auto;
+    padding: 2rem 0 2rem 0;
+}
+
+.arrowButton {
+    display: inline-block;
+    background-color: gainsboro;
+    padding: .75rem;
+    margin: 0 1rem;
+    width: 2.75rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.arrowButton:focus {
+    outline: none;
+}
+
+
+.controlls {
+    display: block;
+    max-width: 13rem;
+    margin: 0 auto;
+}

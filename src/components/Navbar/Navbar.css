@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+[href] {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    margin-top: -.55rem;
+    padding: 1rem 4rem;
+    background: white;
+}
+
+#logo {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    vertical-align: bottom;
+}
+
+#addlogo {
+    position: relative;
+    display: inline-block;
+    background: #00CE15;
+    color: white;
+    font-weight: 300;
+    padding: .4rem .8rem;
+    margin: .5rem 1rem 0 1rem;
+    border-radius: .2rem;
+    cursor: pointer
+}
+
+#menu {
+    display: inline-block;
+    float: right;
+    margin-top: .4rem;
+}
+
+#menu > a {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .5rem;
+}
+
+#signin {
+    display: inline-block;
+    padding: .5rem !important;
+    border: solid 1px black;
+    border-radius: .25rem;
+    margin-left: .5rem;
+}

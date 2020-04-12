@@ -1,0 +1,30 @@
+.searchbox-container {
+    display: inline;
+}
+
+.searchbox {
+    background: #E5E5E5;
+    width: 35rem;
+    padding: .5rem .5rem .5rem .75rem;
+    border-style: none;
+    border-radius: .2rem;
+}
+
+.searchbox::placeholder {
+    color: #808080;
+    padding-left: 0rem;
+}
+
+.filterInput {
+    background: #E5E5E5;
+    width: 6rem;
+    padding: .5rem .5rem .5rem .75rem;
+    border-style: none;
+    border-radius: .2rem;
+    margin-left: 1rem;
+}
+
+.filterInput::placeholder {
+    color: #808080;
+    padding-left: 0rem;
+}

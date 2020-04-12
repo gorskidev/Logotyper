@@ -66,3 +66,29 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Font Awesome 5 
+Introdution
+    https://github.com/FortAwesome/react-fontawesome#usage
+    
+Commands for installation
+    $ npm i --save @fortawesome/fontawesome-svg-core
+    $ npm i --save @fortawesome/free-solid-svg-icons
+    $ npm i --save @fortawesome/react-fontawesome
+    $ npm i --save @fortawesome/free-brands-svg-icons
+
+### React Router
+Tutorial: https://reacttraining.com/react-router/web/guides/quick-start
+
+### Unit Tests
+Tutorial: https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
+
+### Node.js tutorial
+https://developer.mozilla.org/pl/docs/Learn/Server-side/Express_Nodejs/Introduction
+
+### Build a Blog using Express.js and React - backend tutorial // NOT WORKING - ONLY OKTA TUTORIAL PART IS WORKING
+https://scotch.io/tutorials/build-a-blog-using-expressjs-and-react-in-30-minutes
+
+### Express.js + React.js + Node
+https://softwarebrothers.co/blog/server-side-rendering-with-react-and-express/
+

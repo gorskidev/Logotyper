@@ -1,0 +1,21 @@
+.galleryElement > .frame {
+    position: relative;
+    height: 12rem;
+    margin: .5rem 0;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+.galleryElement > .frame > img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 5rem;
+}
+
+.galleryElement {
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+}

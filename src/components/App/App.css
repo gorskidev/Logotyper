@@ -1,0 +1,138 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+[href] {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  margin-top: -.55rem;
+  padding: 1rem 4rem;
+  background: white;
+}
+
+#logo {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  vertical-align: bottom;
+}
+
+#addlogo {
+  position: relative;
+  display: inline-block;
+  background: #00CE15;
+  color: white;
+  font-weight: 300;
+  padding: .4rem .8rem;
+  margin: .5rem 1rem 0 1rem;
+  border-radius: .2rem;
+  cursor: pointer
+}
+
+#menu {
+  display: inline-block;
+  float: right;
+  margin-top: .4rem;
+}
+
+.menuA {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: .5rem;
+}
+
+#signin {
+  display: inline-block;
+  padding: .5rem !important;
+  border: solid 1px black;
+  border-radius: .25rem;
+  margin-left: .5rem;
+}
+
+
+#Home-Gallery-Container {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 2rem 4rem 5rem 4rem;
+}
+
+#addyourlogo {
+  position: relative;
+  background: #1A1A1A;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 4rem;
+  color: white;
+  height: 40rem;
+}
+
+#addyourlogo > .headline {
+  display: block;
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-left: -.25rem;
+}
+
+#addyourlogo > .description {
+  color: white;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin-top: 2rem;
+  max-width: 24rem;
+}
+
+#addyourlogo > .final {
+  color: white;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+#addyourlogo > img {
+  position: absolute;
+  max-width: 18rem;
+  bottom: 0;
+  left: 0;
+}
+
+.upload {
+  margin-top: 10rem;
+}
+
+.upload > h2 {
+  text-align: center;
+}
+
+.upload > .icon {
+  text-align: center;
+  margin-top: .75rem;
+}
+
+.upload > img {
+  display: block;
+  max-width: 7rem;
+  margin: 1rem auto 0 auto;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 4rem;
+}
+
+#galleryApp {
+  padding: 2rem 4rem;
+  max-width: 150rem;
+  margin: 0 auto;
+}

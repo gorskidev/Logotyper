@@ -1,0 +1,95 @@
+.box {
+    position: relative;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem;
+}
+
+.gray {
+    background: rgb(212, 212, 212);
+}
+
+.rounded {
+    border-radius: 1rem;
+    border: 0px solid black;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.pn-buttons-container {
+    display: block;
+    margin: 2rem auto;
+    background: red;
+    width: 10rem;
+}
+
+.centeredButton {
+    width: 5rem
+}
+
+/* Max-Widths */
+
+.mW-25 {
+    max-width: 25rem;
+}
+
+.mW-50 {
+    max-width: 50rem;
+}
+
+.mW-75 {
+    max-width: 75rem;
+}
+
+.mW-100 {
+    max-width: 100rem;
+}
+
+/* Margins */
+
+.mT-1 {
+    margin-top: 1rem
+}
+
+.mT-2 {
+    margin-top: 2rem
+}
+
+.mT-3 {
+    margin-top: 3rem;
+}
+
+.mT-5 {
+    margin-top: 5rem;
+}
+
+.mB-1 {
+    margin-bottom: 1rem;
+}
+
+.mB-3 {
+    margin-bottom: 3rem;
+}
+
+.mB-5 {
+    margin-bottom: 5rem;
+}
+
+/* Paddings */
+.pg-05 {
+    padding: 0.5rem
+}
+
+.pg-1 {
+    padding: 1rem
+}
