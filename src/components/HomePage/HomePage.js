@@ -12,19 +12,16 @@ import Gallery from '../Gallery/Gallery'
 class HomePage extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-          gallery: this.props.elements
-        }
     }
 
     render() {
-        const { gallery } = this.state
+        const { elements } = this.props
         return (
             <div>
                 <Header />
                 <div id="Home-Gallery-Container">
                     {/*<AutoComplete suggestions={["1", "10", "100", "150", "175", "2", "20", "200", "3", "300", "300", "4", "40", "400", "5", "50", "500"]} />*/}
-                    <Gallery elements={gallery} defaultAmount={8} />
+                    <Gallery elements={elements} defaultAmount={4} />
                 </div>
                 <div id="addyourlogo">
                     <h1 className="headline">Designers, <b>unite</b>.</h1>

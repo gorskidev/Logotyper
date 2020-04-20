@@ -18,6 +18,14 @@ class PopUp extends React.Component {
         this.props.setTags(e.target.innerHTML)
     }
 
+    componentDidMount() {
+        window.addEventListener("keydown", e => {
+            if (e.keyCode === 27) {
+                this.props.click(e)
+            }
+        })
+    }
+
     render() {
         return (
             <div>

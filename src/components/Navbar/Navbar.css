@@ -55,3 +55,7 @@ nav {
     border-radius: .25rem;
     margin-left: .5rem;
 }
+
+.navbar-autocomplete {
+    left: 9.75rem !important;
+}

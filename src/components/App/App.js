@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  NavLink
 } from "react-router-dom"
 
 // CSS
@@ -15,10 +16,13 @@ import character from './character.png'
 //import box from './box.png'
 
 // Components
-import SearchBar from '../SearchBar/SearchBar'
+import Navbar from "../Navbar/Navbar"
 import HomePage from '../HomePage/HomePage'
+import SearchBar from '../SearchBar/SearchBar'
 import Gallery from '../Gallery/Gallery';
 import Order from '../Order/Order'
+import SinglePostDisplay from '../SinglePostDisplay/SinglePostDisplay'
+import AutoComplete from '../AutoComplete/AutoComplete'
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,27 +32,6 @@ import { faChevronDown, faAngleLeft, faAngleRight } from '@fortawesome/free-soli
 
 library.add(fab, faChevronDown, faAngleLeft, faAngleRight)
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <span>
-        <a href="#" id="addlogo">Add your logo</a>
-        <div id="menu">
-            {/*<a href="#">Order </a>
-            <a href="#">Logo generator </a>*/}
-            <Link className="menuA" to="/order">Order</Link>
-            <Link className="menuA" to="/gallery">Gallery</Link>
-            {/*<a href="#">Sign Up </a>
-            <a id="signin" href="#">Sign In </a>*/}
-        </div>
-      </span>
-    )
-  }
-}
 
 class App extends React.Component {
   constructor(props) {
@@ -199,40 +182,42 @@ class App extends React.Component {
           id: 15,
           tags: ['programming', 'developer']
         },
-      ]
+      ],
+      search: '',
     }
+  }
+
+  componentDidMount() {
+    alert("Warning!\nThis is very early-production version of Logotyper. \nIt's functionability is limited to a front-end view.\nVersion 1.01, works began on April 4. \n\nKeep in mind that there is only one person working on it!")
   }
 
   render() {
     return(
       <div>
         <Router>
-          <div>
-            <nav>
-                <Link id="logo" to="/">LogoTyper</Link>
-                <SearchBar placeholder={"Search for logos, authors, users..."} />
-                <Navbar />
-            </nav>
-            </div>
-            <Switch>
-              <Route path="/gallery">
-                <div id="galleryApp">
-                  <Gallery elements={this.state.gallery} defaultAmount={16} />
-                </div>
-              </Route>
-              <Route path="/order">
-                  <Order />
-              </Route>
-              <Route path="/">
-                <HomePage elements={this.state.gallery}/>
-              </Route>
-            </Switch>
+            <Navbar elements = {this.state.gallery}/>
+          <Switch>
+            <Route path="/gallery">
+              <div id="galleryApp">
+                <Gallery elements={this.state.gallery} defaultAmount={16} />
+              </div>
+            </Route>
+            <Route path="/order">
+                <Order />
+            </Route>
+            <Route path="/singlepost">
+              <SinglePostDisplay />
+            </Route>
+            <Route path="/">
+              <HomePage elements={this.state.gallery}/>
+            </Route>
+          </Switch>
           <footer>
-            <div>
-              <h2>LogoTyper</h2>
-            </div>
-              <Navbar />
-              <a>Developed By Maciej Górski</a>
+          <div>
+            <h2>LogoTyper</h2>
+          </div>
+            {/*<Navbar />*/}
+            <a>Developed By Maciej Górski</a>
           </footer>
         </Router>
       </div>

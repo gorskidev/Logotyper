@@ -80,6 +80,9 @@ Commands for installation
 ### React Router
 Tutorial: https://reacttraining.com/react-router/web/guides/quick-start
 
+### Server Side routing
+https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing
+
 ### Unit Tests
 Tutorial: https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
 

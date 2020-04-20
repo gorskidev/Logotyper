@@ -1,8 +1,10 @@
 .searchbox-container {
+    position: relative;
     display: inline;
 }
 
 .searchbox {
+    position: relative;
     background: #E5E5E5;
     width: 35rem;
     padding: .5rem .5rem .5rem .75rem;

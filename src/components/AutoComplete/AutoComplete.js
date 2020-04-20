@@ -1,153 +1,79 @@
-import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
+import React from 'react'
 
-class Autocomplete extends Component {
-  static propTypes = {
-    suggestions: PropTypes.instanceOf(Array)
-  };
+import './AutoComplete.css'
 
-  static defaultProps = {
-    suggestions: []
-  };
 
-  constructor(props) {
-    super(props);
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom"
 
+
+class AutoComplete extends React.Component {
+  constructor(props){
+    super(props)
     this.state = {
-      // The active selection's index
-      activeSuggestion: 0,
-      // The suggestions that match the user's input
-      filteredSuggestions: [],
-      // Whether or not the suggestion list is shown
-      showSuggestions: false,
-      // What the user has entered
-      userInput: ""
-    };
+      suggestion: [],
+      //queryString: "/singlepost?title=" + this.props.element.title + "&author=" + this.props.element.author + "&price=" + this.props.element.price + "&src=" + this.props.element.img + "&id=" + this.props.element.id
+    }
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  // Event fired when the input value is changed
-  onChange = e => {
-    const { suggestions } = this.props;
-    const userInput = e.currentTarget.value;
-
-    // Filter our suggestions that don't contain the user's input
-    const filteredSuggestions = suggestions.filter(
-      suggestion =>
-        suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
-    );
-
-    // Update the user input and filtered suggestions, reset the active
-    // suggestion and make sure the suggestions are shown
+  pickSuggestion() {
+    const { search } = this.props
     this.setState({
-      activeSuggestion: 0,
-      filteredSuggestions,
-      showSuggestions: true,
-      userInput: e.currentTarget.value
-    });
-  };
+      suggestion: this.props.elements.map(element => element).filter(element => 
+          element.title.toLowerCase().includes(search.toLowerCase())
+          || element.author.toLowerCase().includes(search.toLowerCase())
+          || element.tags.join('').includes(search.toLowerCase()) 
+          )
+    })
+  }
 
-  // Event fired when the user clicks on a suggestion
-  onClick = e => {
-    // Update the user input and reset the rest of the state
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps !== this.props) {
+      this.pickSuggestion()
+      return true
+    }  else if (nextState !== this.state) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  handleClick(e){
     this.setState({
-      activeSuggestion: 0,
-      filteredSuggestions: [],
-      showSuggestions: false,
-      userInput: e.currentTarget.innerText
-    });
-  };
+      elementTitle: e.target.innerText.split(" ")[0]
+    })
+    this.props.onClick(e.target.innerText.split(" ")[0])
+  }
 
-  // Event fired when the user presses a key down
-  onKeyDown = e => {
-    const { activeSuggestion, filteredSuggestions } = this.state;
-
-    // User pressed the enter key, update the input and close the
-    // suggestions
-    if (e.keyCode === 13) {
-      this.setState({
-        activeSuggestion: 0,
-        showSuggestions: false,
-        userInput: filteredSuggestions[activeSuggestion]
-      });
-    }
-    // User pressed the up arrow, decrement the index
-    else if (e.keyCode === 38) {
-      if (activeSuggestion === 0) {
-        return;
-      }
-
-      this.setState({ activeSuggestion: activeSuggestion - 1 });
-    }
-    // User pressed the down arrow, increment the index
-    else if (e.keyCode === 40) {
-      if (activeSuggestion - 1 === filteredSuggestions.length) {
-        return;
-      }
-
-      this.setState({ activeSuggestion: activeSuggestion + 1 });
-    }
-  };
+  parseToGalleryUrl(title, author, price, img, id) {
+    return `/singlepost?title=${title}&author=${author}&price=${price}&src=${img}&id=${id}`
+  }
 
   render() {
-    const {
-      onChange,
-      onClick,
-      onKeyDown,
-      state: {
-        activeSuggestion,
-        filteredSuggestions,
-        showSuggestions,
-        userInput
-      }
-    } = this;
-
-    let suggestionsListComponent;
-
-    if (showSuggestions && userInput) {
-      if (filteredSuggestions.length) {
-        suggestionsListComponent = (
-          <ul class="suggestions">
-            {filteredSuggestions.map((suggestion, index) => {
-              let className;
-
-              // Flag the active suggestion with a class
-              if (index === activeSuggestion) {
-                className = "suggestion-active";
-              }
-
-              return (
-                <li
-                  className={className}
-                  key={suggestion}
-                  onClick={onClick}
-                >
-                  {suggestion}
-                </li>
-              );
-            })}
-          </ul>
-        );
-      } else {
-        suggestionsListComponent = (
-          <div class="no-suggestions">
-            <em>No suggestions, you're on your own!</em>
-          </div>
-        );
-      }
-    }
-
     return (
-      <Fragment>
-        <input
-          type="text"
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          value={userInput}
-        />
-        {suggestionsListComponent}
-      </Fragment>
-    );
+      <div className={this.props.cssfixclass + " " + "suggestion-container"}>
+        {
+          this.state.suggestion.map((element, index) => 
+            { 
+              if(index < 6) {
+                return (
+                //<Link to={"/singlepost?title=" + element.title + "&author=" + element.author + "&price=" + element.price + "&src=" + element.img + "&id=" + element.id}>
+                <Link to={this.parseToGalleryUrl(element.title, element.author, element.price, element.img, element.id)}>
+                  <div className="suggestion" key={index} onClick={this.handleClick}>
+                    <span><img src={element.img}/></span> {element.title} by {element.author}
+                  </div>
+                </Link>
+                )
+              }
+            })
+        }
+      </div>
+    )
   }
 }
 
-export default Autocomplete;
+export default AutoComplete

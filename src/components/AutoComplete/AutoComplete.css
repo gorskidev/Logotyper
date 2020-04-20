@@ -1,1 +1,25 @@
 
+.autocomplete {
+    position: absolute;
+    display: block;
+}
+
+.suggestion-container {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 35rem;
+    background-color: whitesmoke;
+    z-index: 9999;
+    box-shadow: 0 0 1px black;
+}
+
+.suggestion {
+    display: block;
+    margin: 1.5rem 1rem;
+}
+
+.suggestion > span > img {
+    max-width: 1rem; 
+    margin-right: 1rem;
+}

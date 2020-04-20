@@ -15,6 +15,7 @@ import Description from './Description/Description'
 import Gallery from '../Gallery/Gallery'
 import TagSuggests from '../TagSuggests/TagSuggests'
 import { toHtml } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class FirstSummary extends React.Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class Summary extends React.Component {
                 <h2>{this.props.brandSpec}</h2>
                 <p>{this.props.description}</p>
                 <p>{this.props.tags}</p>
-                <p>{this.props.price}</p>
+                <p>{this.props.price} $</p>
                 <div className="grid">
                     {this.props.imgs.map((element, index) => {  
                         return (
@@ -275,9 +276,11 @@ class Order extends React.Component {
     }
 
     setPrice(e) {
-        this.setState({
-            price: e.target.value
-        })
+        if (!isNaN(e.target.value)) {
+            this.setState({
+                price: e.target.value
+            })
+        }
     }
 
     setComponent() {
@@ -306,8 +309,8 @@ class Order extends React.Component {
                             setTags = {this.setTags}
                         />*/}
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>
                     </div>
                     
@@ -315,7 +318,8 @@ class Order extends React.Component {
                     break;
             case 2: 
                 return (
-                    <div>
+                    <div className="center mW-75">
+                        <a className="center box mW-30 text-center f-size2"> Pick logos that you like! </a>
                         <Gallery 
                             elements = {this.state.gallery} 
                             defaultAmount = {8}
@@ -324,15 +328,15 @@ class Order extends React.Component {
                             selectImg = {this.selectImg}
                         />
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>
                     </div>
                 )
                 break;
             case 3:
                 return (
-                    <div>
+                    <div className="box gray rounded-box mW-50 box-shadow">
                         <FirstSummary 
                             brandName = {this.state.brandName}
                             brandSpec = {this.state.brandSpecialization}
@@ -340,8 +344,8 @@ class Order extends React.Component {
                             imgs = {this.state.selectedGallery}
                         />
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>
                     </div>
                 )
@@ -354,8 +358,8 @@ class Order extends React.Component {
                             description = {this.state.description}
                         />
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>
                     </div>
                 )
@@ -363,13 +367,13 @@ class Order extends React.Component {
             case 5:
                 return (
                     <div>
-                        <div className="box gray center mW-25">
+                        <div className="box gray center mW-25 rounded box-shadow mT-2 mB-3">
                             <p>How much would you pay for your logo?</p>
-                            <input className="center mW-25 mT-1" onChange={this.setPrice} type="text" value={this.state.price}></input>
+                            <input className="center text-center mW-5 mT-2 rounded pg-05" onChange={this.setPrice} type="text" value={this.state.price}></input>
                         </div>
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>
                     </div>
                 )
@@ -385,8 +389,8 @@ class Order extends React.Component {
                             price = {this.state.price}
                         />
                         <div className="pn-buttons-container">
-                            <button className="centeredButton" onClick = {this.previousComponent}>Previous</button>
-                            <button className="centeredButton" onClick = {this.nextComponent}>Next</button>
+                            <button className="centeredButton" onClick = {this.previousComponent}><FontAwesomeIcon icon="angle-left"/></button>
+                            <button className="centeredButton" onClick = {this.nextComponent}><FontAwesomeIcon icon="angle-right"/></button>
                         </div>    
                     </div>
                 )
@@ -407,7 +411,7 @@ class Order extends React.Component {
                 this.setState({
                     currentComponent: currentComponent + 1
                 })
-            } else if (currentComponent == 2 && selectedGallery) {
+            } else if (currentComponent == 2 && selectedGallery.length > 0) {
                 this.setState({
                     currentComponent: currentComponent + 1
                 }) 
