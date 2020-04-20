@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6b9dd608ce9cbba2f396eaa819a8209",
+    "revision": "b51f065012129962d0f0f585e677dc9c",
     "url": "/Logotyper/index.html"
   },
   {
-    "revision": "0fd756797c3f55e65853",
-    "url": "/Logotyper/static/css/main.b9e41dcf.chunk.css"
+    "revision": "c1f8ac48f71b7a121f15",
+    "url": "/Logotyper/static/css/main.7453e64a.chunk.css"
   },
   {
-    "revision": "f00b15e5c7293ac07181",
-    "url": "/Logotyper/static/js/2.5d9d8c8b.chunk.js"
+    "revision": "8f22d39e85d3d211ee06",
+    "url": "/Logotyper/static/js/2.357a8782.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Logotyper/static/js/2.5d9d8c8b.chunk.js.LICENSE.txt"
+    "url": "/Logotyper/static/js/2.357a8782.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0fd756797c3f55e65853",
-    "url": "/Logotyper/static/js/main.0c801e1f.chunk.js"
+    "revision": "c1f8ac48f71b7a121f15",
+    "url": "/Logotyper/static/js/main.355b9951.chunk.js"
   },
   {
     "revision": "b1723b01c7428e8933d7",
