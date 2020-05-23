@@ -1,0 +1,461 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+[href] {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  margin-top: -.55rem;
+  padding: 1rem 4rem;
+  background: white;
+}
+
+.active {
+  font-weight: 800 !important;
+}
+
+#logo {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  vertical-align: bottom;
+}
+
+#addlogo {
+  position: relative;
+  display: inline-block;
+  background: #00CE15;
+  color: white;
+  font-weight: 300;
+  padding: .4rem .8rem;
+  margin: .5rem 1rem 0 1rem;
+  border-radius: .2rem;
+  cursor: pointer
+}
+
+#menu {
+  display: inline-block;
+  margin-top: .4rem;
+}
+
+.menuA {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: .5rem;
+}
+
+#signin {
+  display: inline-block;
+  padding: .5rem !important;
+  border: solid 1px black;
+  border-radius: .25rem;
+  margin-left: .5rem;
+}
+
+
+#Home-Gallery-Container {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 2rem 4rem 5rem 4rem;
+}
+
+#addyourlogo {
+  position: relative;
+  background: #1A1A1A;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 4rem;
+  color: white;
+  height: 40rem;
+}
+
+#addyourlogo > .headline {
+  display: inline;
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-left: -.25rem;
+}
+
+#addyourlogo > .description {
+  color: white;
+  font-weight: 300;
+  line-height: 1.25rem;
+  margin-top: 2rem;
+  max-width: 24rem;
+}
+
+#addyourlogo > .final {
+  color: white;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+#addyourlogo > img {
+  position: absolute;
+  max-width: 18rem;
+  bottom: 0;
+  left: 0;
+}
+
+.upload {
+  margin-top: 10rem;
+}
+
+.upload > h2 {
+  text-align: center;
+}
+
+.upload > .icon {
+  text-align: center;
+  margin-top: .75rem;
+}
+
+.upload > img {
+  display: block;
+  max-width: 7rem;
+  margin: 1rem auto 0 auto;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 4rem;
+}
+
+#galleryApp {
+  padding: 2rem 4rem;
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+input,textarea {
+  width: 100%;
+}
+
+.fullpage {
+  height: 70vh;
+}
+
+.box {
+  position: relative;
+  margin: 2rem auto 2rem auto;
+  padding: 2rem;
+}
+
+.gray {
+  background: rgb(235, 235, 235);
+}
+
+.green {
+  background: rgb(0,206,21)
+}
+
+.rounded {
+  border-radius: 1rem;
+  border: 0px solid black;
+}
+
+.rounded-box {
+  border-radius: .25rem;
+  border: 0px solid black
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.wText {
+  color: white;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 5px rgba(49, 49, 49, 0.376) ;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.pn-buttons-container {
+  display: block;
+  margin: 2rem auto;
+  background: red;
+  width: 10rem;
+}
+
+.centeredButton {
+  width: 5rem
+}
+
+/* Those classes were created specifically for certain elements. */
+
+.text-vertical-align {
+  line-height: 1.5rem !important;
+}
+
+/* Widths */
+.width-1 {
+  width: 1rem !important;
+}
+
+.width-5 {
+  width: 5rem !important;
+}
+
+.width-10 {
+  width: 10rem !important;
+}
+
+/* Heights */
+.height-1 {
+  height: 1rem !important;
+}
+
+.height-3 {
+  height: 3rem !important;
+}
+
+.height-5 {
+  height: 5rem !important;
+}
+
+/* Max-Heights */
+.mH-1 {
+  max-height: 1rem;
+}
+
+.mH-2 {
+  max-height: 2rem;
+}
+
+.mH-3 {
+  max-height: 3rem;
+}
+
+/* Max-Widths */
+.mW-3 {
+  max-width: 3rem !important;
+}
+
+.mW-5 {
+  max-width: 5rem !important;
+}
+
+.mW-10 {
+  max-width: 10rem !important;
+}
+
+.mW-25 {
+  max-width: 25rem !important;
+}
+
+.mW-30 {
+  max-width: 30rem !important;
+}
+
+.mW-40 {
+  max-width: 40rem !important;
+}
+
+.mW-50 {
+  max-width: 50rem !important;
+}
+
+.mW-75 {
+  max-width: 75rem !important;
+}
+
+.mW-100 {
+  max-width: 100rem !important;
+}
+
+/* Margins */
+
+/*Global*/
+.gM-1 {
+  margin: 1rem;
+}
+
+.mN-5 {
+  margin: 5rem;
+}
+
+.mN-10 {
+  margin: 10rem;
+}
+
+/* Sides */
+
+.sM-05 {
+  margin: 0 .5rem;
+}
+
+.sM-1 {
+  margin: 0 1rem;
+}
+
+/* Right */
+
+.mR-1 {
+  margin-right: 1rem;
+}
+
+
+
+.mT-1 {
+  margin-top: 1rem;
+}
+
+.mT-2 {
+  margin-top: 2rem;
+}
+
+.mT-3 {
+  margin-top: 3rem !important;
+}
+
+.mT-5 {
+  margin-top: 5rem;
+}
+
+.mB-1 {
+  margin-bottom: 1rem !important;
+}
+
+.mB-150 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mB-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mB-3 {
+  margin-bottom: 3rem !important;
+}
+
+.mB-5 {
+  margin-bottom: 5rem;
+}
+
+
+/* Paddings */
+
+.pg-25 {
+  padding: .25rem
+}
+
+.pg-05 {
+  padding: .5rem
+}
+
+.pg-1 {
+  padding: 1rem;
+}
+
+.pg-3 {
+  padding: 3rem;
+}
+
+.f-size05 {
+  font-size: .5rem !important;
+}
+
+.f-size075 {
+  font-size: .75rem !important;
+}
+
+.f-size1 {
+  font-size: 1rem;
+}
+
+.f-size125 {
+  font-size: 1.25rem;
+}
+
+.f-size150 {
+  font-size: 1.5rem;
+}
+
+.f-size2 {
+  font-size: 2rem !important;
+}
+
+input:focus {
+  outline: none;
+}
+
+/*input:focus + label {
+  color: black;
+  outline: solid black 0px !important;
+  border: none !important;
+  margin-top: -1.25rem;
+  font-weight: 500;
+  transition: .3s all;
+  user-select: none;
+}
+
+input:visited + label {
+  color: black;
+  outline: solid black 0px !important;
+  border: none !important;
+  margin-top: -1.25rem;
+  font-weight: 500;
+  transition: .3s all;
+  user-select: none;
+}
+*/
+
+form {
+  position: relative;
+  transition: .3s all;
+}
+
+label[for="name"], label[for="email"], label[for="password"], label[for="password2"] {
+  position: absolute;
+  left: 0rem;
+  margin-top: 3.25rem;
+  user-select: none;
+  color: rgb(0, 0, 0);
+  transition: .3s all;
+}
+
+.auth {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px black;
+  font-size: 1.25rem
+}
+
+.focusedLabel {
+  font-weight: 500;
+  font-size: .75rem;
+  margin-top: 2rem !important;
+}
+
+.focusedInput {
+  border-bottom: solid 2px black;
+  transition: .3s all;
+}

@@ -1,0 +1,46 @@
+.ts-box {
+    position: absolute;
+    background: white;
+    box-shadow: black 0 0 2px;
+    padding: 1rem;
+    width: 40rem;
+    margin: 0 auto;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.ts-title {
+    padding-bottom: 0rem;
+}
+
+.ts-closebutton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+.blockOpt {
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+.icon-options {
+    text-align: center;
+    margin: 0 auto;
+}

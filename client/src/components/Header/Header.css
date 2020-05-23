@@ -1,0 +1,56 @@
+#body {
+    position: relative;
+    background-image: linear-gradient(hsl(273, 77%, 12%) 0%, rgb(65, 30, 121) 40%,white 150%);
+    height: 90vh;
+    padding: 4rem;
+    overflow-y: hidden;
+}
+
+#header {
+    margin-top: 7rem;
+}
+
+#body > #header > h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: white;
+}
+
+.cta {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+    background: rgb(255, 0, 106);
+    margin-top: 2rem;
+    padding: .75rem;
+    border-radius: .75rem;
+    transition: .1s all;
+}
+
+.cta:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.52) 0 0 5px;
+    background: white;
+    color: black;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+#image {
+    position: absolute;
+    display: block;
+    background-image: url('./desktop-art.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 55%;
+    bottom: -5rem;
+    right: 2rem;
+}

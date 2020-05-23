@@ -1,0 +1,62 @@
+.frame {
+    position: relative;
+    height: 12rem;
+    margin: .5rem auto;
+    border: 1px solid rgb(175, 175, 175);
+    background: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.frame > img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 50%;
+}
+
+.galleryElement {
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.selectedImg {
+    filter: contrast(.7);
+}
+
+.galleryElement > .bookmarked {
+    position: absolute;
+    top: 1.4rem !important;
+    filter: saturate(100%) !important;
+}
+
+.galleryElement::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 2rem;
+    height: 1rem;
+    top: .7rem;
+    right: 0;
+    background-color: white;
+    z-index: 9999;
+}
+
+.galleryElement > #addtobookmarks {
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+    right: 0;
+    z-index: 9999;
+    filter: saturate(0);
+    cursor: pointer;
+    transition: .4s all;
+}

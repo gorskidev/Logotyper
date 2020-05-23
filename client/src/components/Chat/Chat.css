@@ -1,0 +1,77 @@
+.chat-box-message {
+    position: relative;
+    display: block;
+    padding: 2rem;
+    opacity: 1;
+}
+
+.chat-box-message:hover {
+    background: rgba(128, 128, 128, 0.157);
+}
+
+.chat-box-message > .chat-box-message-notclickable {
+    position: absolute;
+    display: block;
+    z-index: -1;
+}
+
+.chat-box-message-notclickable:hover {
+    position: absolute;
+    display: block;
+    z-index: -1;
+}
+
+.chat-container {
+    position: relative;
+}
+
+.chat-container > #chatform > #form-button {
+    position: absolute;
+    right: 0rem;
+    font-size: 1.25rem;
+}
+
+.chat-container > #chatform > textarea {
+    padding: .5rem;
+}
+
+.chat-box {
+    display: block;
+    overflow-y: scroll;
+    padding: 1rem;
+    height: 30rem;
+    background-color: rgb(75, 75, 75);
+}
+
+.recipient {
+    color: rgb(2, 1, 1) !important;
+    background-color: rgb(207, 207, 207);
+    float: left;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.sender {
+    background-color: rgb(128, 119, 255);
+    float: right;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.message {
+    font-weight: 300;
+    color: white;
+    display: inline-block;
+    max-width: 15rem;
+    padding: .5rem;
+}
+
+#sendform {
+    position: absolute;
+}
+
+#chatpage {
+    height: 50vh;
+}
